@@ -4,10 +4,9 @@
 	{
 		public double Score { get; set; }
 
-		#region Relationships
-		public long UserID { get; set; }
 
+		// Relationships
+		public long UserID { get; set; }
 		public long BookID { get; set; }
-		#endregion
 	}
 }

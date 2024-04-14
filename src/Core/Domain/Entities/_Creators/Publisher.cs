@@ -7,8 +7,8 @@ namespace Domain.Entities._Creators
     {
         public string Title { get; set; }
 
-        #region Relationships
-        public IList<Book> Books { get; set; }
-        #endregion
+
+		// Navigations links
+		public IList<Book> Books { get; set; }
     }
 }

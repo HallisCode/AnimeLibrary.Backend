@@ -6,8 +6,7 @@
 
 		public string Password { get; set; }
 
-		#region Relationships
+		// Relationships
 		public long UserID { get; set; }
-		#endregion
 	}
 }
