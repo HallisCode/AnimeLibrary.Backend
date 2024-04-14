@@ -3,7 +3,7 @@ using Domain.Enums;
 
 namespace Domain.Entities._Book
 {
-    public class Review : Entity
+	public class Review : Entity
 	{
 		public string Content { get; set; }
 
