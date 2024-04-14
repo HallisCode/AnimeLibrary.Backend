@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Domain.Entities._Relationships;
+using System;
 using System.Collections.Generic;
-using Domain.Entities.Relationships;
 
-namespace Domain.Entities
+namespace Domain.Entities._Creators
 {
     public class Author : Entity
     {

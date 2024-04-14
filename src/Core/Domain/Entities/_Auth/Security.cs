@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Domain.Entities._Auth
+﻿namespace Domain.Entities._Auth
 {
 	public class Security : Entity
 	{

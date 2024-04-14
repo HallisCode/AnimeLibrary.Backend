@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using Domain.Entities._Classification;
+using Domain.Entities._Creators;
 using Domain.Entities._Relationships;
+using System.Collections.Generic;
 
 namespace Domain.Entities._Book
 {
-	public class Book : Entity
+    public class Book : Entity
 	{
 		public string Title { get; set; }
 
