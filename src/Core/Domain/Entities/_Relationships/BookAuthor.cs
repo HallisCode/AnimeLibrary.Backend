@@ -3,7 +3,7 @@ using Domain.Entities._Creators;
 
 namespace Domain.Entities._Relationships
 {
-    public class BookAuthor
+	public class BookAuthor
 	{
 		// Relationships
 		public long AuthorID { get; set; }
