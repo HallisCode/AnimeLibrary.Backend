@@ -1,13 +1,12 @@
-﻿using Domain.Entities._User;
+﻿
+using Domain.Entities._Book;
 using Domain.Enums;
 
-namespace Domain.Entities._Book
+namespace Domain.Entities._User
 {
-    public class Review : Entity
+	public class MarkedBook : Entity
 	{
-		public string Content { get; set; }
-
-		public ReviewType Type { get; set; }
+		public MarkedBookStatus Status { get; set; }
 
 
 		// Relationships
@@ -17,6 +16,5 @@ namespace Domain.Entities._Book
 		// Navigations links
 		public User User { get; set; }
 		public Book Book { get; set; }
-
 	}
 }

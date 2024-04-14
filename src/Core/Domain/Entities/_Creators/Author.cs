@@ -16,8 +16,8 @@ namespace Domain.Entities._Creators
 
         public string Description { get; set; }
 
-        #region Relationships
-        public IList<BookAuthor> BookAuthors { get; set; }
-        #endregion
+
+		// Navigations links
+		public IList<BookAuthor> BookAuthors { get; set; }
     }
 }

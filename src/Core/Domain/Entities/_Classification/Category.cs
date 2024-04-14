@@ -8,13 +8,13 @@ namespace Domain.Entities._Classification
     {
         public string Title { get; set; }
 
-        #region Relationships
-        public Category ParentCategory { get; set; }
+
+		// Relationships
         public long? ParentCategoryID { get; set; }
 
-        public IList<Category> SubCategories { get; set; }
-
+		// Navigations links
+		public Category ParentCategory { get; set; }
+		public IList<Category> SubCategories { get; set; }
         public IList<Book> Books { get; set; }
-        #endregion
     }
 }
