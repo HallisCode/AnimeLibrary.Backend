@@ -17,13 +17,15 @@ namespace Domain.Entities._Book
 
 		public string Description { get; set; }
 
-		#region Relationships
+
+		// Relationships
+		public long PublisherID { get; set; }
+
+		// Navigations links
 		public IList<BookAuthor> BookAuthors { get; set; }
 
 		public IList<Category> Categories { get; set; }
 
 		public Publisher Publisher { get; set; }
-		public long PublisherID { get; set; }
-		#endregion
 	}
 }
