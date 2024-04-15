@@ -1,9 +1,9 @@
-﻿using Domain.Entities.Classification;
-using Domain.Entities.Creators;
-using Domain.Entities.Relationships;
+﻿using Domain.Entities._Classification;
+using Domain.Entities._Creators;
+using Domain.Entities._Relationships;
 using System.Collections.Generic;
 
-namespace Domain.Entities.Library
+namespace Domain.Entities._Book
 {
 	public class Book : Entity
 	{

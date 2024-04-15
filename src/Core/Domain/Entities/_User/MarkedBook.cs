@@ -1,8 +1,8 @@
 ﻿
-using Domain.Entities.Library;
+using Domain.Entities._Book;
 using Domain.Enums;
 
-namespace Domain.Entities.User
+namespace Domain.Entities._User
 {
 	public class MarkedBook : Entity
 	{
