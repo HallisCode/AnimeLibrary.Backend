@@ -1,8 +1,8 @@
-﻿using Domain.Entities.Library;
+﻿using Domain.Entities._Book;
 using System.Collections.Generic;
 
 
-namespace Domain.Entities.Classification
+namespace Domain.Entities._Classification
 {
 	public class Category : Entity
 	{

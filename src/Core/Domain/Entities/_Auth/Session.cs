@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace Domain.Entities.Auth
+namespace Domain.Entities._Auth
 {
 	public class Session
 	{

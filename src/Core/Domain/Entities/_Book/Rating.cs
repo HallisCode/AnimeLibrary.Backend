@@ -1,4 +1,4 @@
-﻿namespace Domain.Entities.Library
+﻿namespace Domain.Entities._Book
 {
 	public class Rating : Entity
 	{
