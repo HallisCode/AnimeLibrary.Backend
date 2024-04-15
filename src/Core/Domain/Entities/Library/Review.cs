@@ -1,7 +1,7 @@
-﻿using Domain.Entities._User;
+﻿using Domain.Entities.User;
 using Domain.Enums;
 
-namespace Domain.Entities._Book
+namespace Domain.Entities.Library
 {
 	public class Review : Entity
 	{
@@ -15,7 +15,7 @@ namespace Domain.Entities._Book
 		public long BookID { get; set; }
 
 		// Navigations links
-		public User User { get; set; }
+		public User.User User { get; set; }
 		public Book Book { get; set; }
 
 	}

@@ -1,7 +1,7 @@
-﻿using Domain.Entities._Book;
-using Domain.Entities._Creators;
+﻿using Domain.Entities.Library;
+using Domain.Entities.Creators;
 
-namespace Domain.Entities._Relationships
+namespace Domain.Entities.Relationships
 {
 	public class BookAuthor
 	{
