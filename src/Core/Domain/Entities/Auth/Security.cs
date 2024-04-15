@@ -1,4 +1,4 @@
-﻿namespace Domain.Entities._Auth
+﻿namespace Domain.Entities.Auth
 {
 	public class Security : Entity
 	{
