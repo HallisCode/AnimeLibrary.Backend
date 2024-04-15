@@ -1,7 +1,7 @@
-﻿using Domain.Entities._Book;
+﻿using Domain.Entities.Library;
 using System.Collections.Generic;
 
-namespace Domain.Entities._Creators
+namespace Domain.Entities.Creators
 {
 	public class Publisher : Entity
 	{
