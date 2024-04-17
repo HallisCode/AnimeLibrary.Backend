@@ -2,10 +2,8 @@
 using Database.IQuery.Delete;
 using Database.IQuery.Select;
 using Domain.Entities.UserData;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
-namespace Database.IRepositories.User
+namespace Database.IRepositories.User_
 {
 	public interface IMarkedBookRepository : 
 		IQuerySelectAll<MarkedBook>, IQueryCreate<MarkedBook>,
