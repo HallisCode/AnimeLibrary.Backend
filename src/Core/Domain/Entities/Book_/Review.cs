@@ -1,7 +1,7 @@
-﻿using Domain.Entities.UserData;
+﻿using Domain.Entities.User_;
 using Domain.Enums;
 
-namespace Domain.Entities.BookData
+namespace Domain.Entities.Book_
 {
     public class Review : Entity<ulong>
 	{

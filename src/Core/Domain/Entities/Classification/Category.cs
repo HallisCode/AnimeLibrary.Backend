@@ -1,4 +1,4 @@
-﻿using Domain.Entities.BookData;
+﻿using Domain.Entities.Book_;
 using System.Collections.Generic;
 
 
@@ -15,7 +15,7 @@ namespace Domain.Entities.Classification
 		// Navigations links
 		public Category ParentCategory { get; set; }
 		public IList<Category> SubCategories { get; set; }
-		public IList<BookData.Book> Books { get; set; }
+		public IList<Book_.Book> Books { get; set; }
 
 
 		// Logic

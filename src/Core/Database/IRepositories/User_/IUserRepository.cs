@@ -1,4 +1,4 @@
-﻿using Domain.Entities.UserData;
+﻿using Domain.Entities.User_;
 
 namespace Database.IRepositories.User_
 {

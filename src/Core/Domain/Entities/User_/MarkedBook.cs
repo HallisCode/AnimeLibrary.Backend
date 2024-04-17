@@ -1,7 +1,7 @@
-﻿using Domain.Entities.BookData;
+﻿using Domain.Entities.Book_;
 using Domain.Enums;
 
-namespace Domain.Entities.UserData
+namespace Domain.Entities.User_
 {
     public class MarkedBook : Entity<ulong>
 	{

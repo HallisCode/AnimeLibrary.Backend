@@ -3,7 +3,7 @@ using Domain.Entities.Creators;
 using Domain.Entities.Relationships;
 using System.Collections.Generic;
 
-namespace Domain.Entities.BookData
+namespace Domain.Entities.Book_
 {
     public class Book : Entity<ulong>
     {

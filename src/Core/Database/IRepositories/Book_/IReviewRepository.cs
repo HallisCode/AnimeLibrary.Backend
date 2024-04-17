@@ -1,4 +1,4 @@
-﻿using Domain.Entities.BookData;
+﻿using Domain.Entities.Book_;
 
 namespace Database.IRepositories.Book_
 {

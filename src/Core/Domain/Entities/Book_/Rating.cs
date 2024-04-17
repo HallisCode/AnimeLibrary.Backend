@@ -1,4 +1,4 @@
-﻿namespace Domain.Entities.BookData
+﻿namespace Domain.Entities.Book_
 {
 	public class Rating : Entity<ulong>
 	{

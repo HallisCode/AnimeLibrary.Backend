@@ -1,7 +1,7 @@
 ﻿using Database.IQuery;
 using Database.IQuery.Delete;
 using Database.IQuery.Select;
-using Domain.Entities.UserData;
+using Domain.Entities.User_;
 
 namespace Database.IRepositories.User_
 {
