@@ -1,4 +1,4 @@
-﻿using Domain.Entities.Book;
+﻿using Domain.Entities.BookData;
 using System.Collections.Generic;
 
 namespace Domain.Entities.Creators
@@ -9,7 +9,7 @@ namespace Domain.Entities.Creators
 
 
 		// Navigations links
-		public IList<Book.Book> Books { get; set; }
+		public IList<BookData.Book> Books { get; set; }
 
 
 		// Logic

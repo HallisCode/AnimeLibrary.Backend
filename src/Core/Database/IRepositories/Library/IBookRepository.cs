@@ -1,5 +1,9 @@
 ﻿using Database.IQuery.Select;
-using Domain.Entities.Book;
+<<<<<<< HEAD
+using Domain.Entities.BookData;
+=======
+using Domain.Entities.Aggregates;
+>>>>>>> 90dcce8 (Database. Ренейминг импорта)
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

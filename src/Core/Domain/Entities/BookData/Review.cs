@@ -1,6 +1,7 @@
-﻿using Domain.Enums;
+﻿using Domain.Entities.UserData;
+using Domain.Enums;
 
-namespace Domain.Entities.Book
+namespace Domain.Entities.BookData
 {
     public class Review : Entity<ulong>
 	{
@@ -14,7 +15,7 @@ namespace Domain.Entities.Book
 		public ulong BookID { get; set; }
 
 		// Navigations links
-		public User.User User { get; set; }
+		public User User { get; set; }
 		public Book Book { get; set; }
 
 

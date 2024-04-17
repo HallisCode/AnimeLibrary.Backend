@@ -1,7 +1,7 @@
 ﻿using Database.IQuery;
 using Database.IQuery.Delete;
 using Database.IQuery.Select;
-using Domain.Entities.User;
+using Domain.Entities.UserData;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

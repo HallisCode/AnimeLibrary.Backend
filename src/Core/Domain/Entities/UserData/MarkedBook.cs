@@ -1,6 +1,7 @@
-﻿using Domain.Enums;
+﻿using Domain.Entities.BookData;
+using Domain.Enums;
 
-namespace Domain.Entities.User
+namespace Domain.Entities.UserData
 {
     public class MarkedBook : Entity<ulong>
 	{
@@ -13,7 +14,7 @@ namespace Domain.Entities.User
 
 		// Navigations links
 		public User User { get; set; }
-		public Book.Book Book { get; set; }
+		public Book Book { get; set; }
 
 
 		// Logic

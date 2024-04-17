@@ -1,4 +1,4 @@
-﻿namespace Domain.Entities.User
+﻿namespace Domain.Entities.UserData
 {
 	public class User : Entity<ulong>
 	{

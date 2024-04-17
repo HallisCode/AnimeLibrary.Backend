@@ -1,5 +1,5 @@
 ﻿using Domain.Entities.Creators;
-using Domain.Entities.Book;
+using Domain.Entities.BookData;
 
 namespace Domain.Entities.Relationships
 {
@@ -11,7 +11,7 @@ namespace Domain.Entities.Relationships
 
 		// Navigations links
 		public Author Author { get; set; }
-		public Book.Book Book { get; set; }
+		public BookData.Book Book { get; set; }
 
 
 		// Logic
