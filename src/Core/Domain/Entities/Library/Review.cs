@@ -1,9 +1,10 @@
-﻿using Domain.Entities.User;
+﻿using Domain.Entities.Aggregates;
+using Domain.Entities.User;
 using Domain.Enums;
 
 namespace Domain.Entities.Library
 {
-	public class Review : Entity<ulong>
+    public class Review : Entity<ulong>
 	{
 		public string Content { get; private set; }
 
