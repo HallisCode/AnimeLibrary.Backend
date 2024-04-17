@@ -10,10 +10,6 @@ namespace Database.IRepositories.Auth
         IQuerySelectFirst<Session>, IQuerySelectAll<Session>, IQueryCreate<Session>,
         IQueryDeleteFirst<Session>, IQueryDeleteAll<Session>
     {
-        /// <summary>
-        /// Помечает сессию активной, меняя дату последней активности.
-        /// </summary>
-        Task AppearByAsync(long guid);
 
     }
 }
