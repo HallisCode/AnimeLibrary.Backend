@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQL", "Presentation\Gra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postgresql", "Infrastructure\Postgresql\Postgresql.csproj", "{ED11A85A-C09C-4D9B-B945-A7E58D617837}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maintenance", "BackgroundWorks\Maintenance\Maintenance.csproj", "{B3E10B54-9A4D-4240-BC95-894DFF843E4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBMaintenance", "BackgroundWorks\DBMaintenance\DBMaintenance.csproj", "{B3E10B54-9A4D-4240-BC95-894DFF843E4C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{588F0E4D-68A9-48F1-A680-64CD40BAE017}"
 EndProject
