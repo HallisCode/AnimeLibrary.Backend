@@ -2,11 +2,22 @@
 {
 	public class Rating : Entity
 	{
-		public double Score { get; set; }
+		public double Score { get; private set; }
 
 
 		// Relationships
-		public long UserID { get; set; }
-		public long BookID { get; set; }
+		public long UserID { get; private set; }
+		public long BookID { get; private set; }
+
+
+		// Logic
+		public Rating(double score, long userID, long bookID)
+		{
+			Score = score;
+
+			UserID = userID;
+
+			BookID = bookID;
+		}
 	}
 }
