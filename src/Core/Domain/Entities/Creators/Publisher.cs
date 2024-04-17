@@ -5,10 +5,17 @@ namespace Domain.Entities.Creators
 {
 	public class Publisher : Entity
 	{
-		public string Title { get; set; }
+		public string Title { get; private set; }
 
 
 		// Navigations links
-		public IList<Book> Books { get; set; }
+		public IList<Book> Books { get; private set; }
+
+
+		// Logic
+		public Publisher(string title)
+		{
+			Title = title;
+		}
 	}
 }

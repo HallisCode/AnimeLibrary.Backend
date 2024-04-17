@@ -7,25 +7,40 @@ namespace Domain.Entities.Library
 {
 	public class Book : Entity
 	{
-		public string Title { get; set; }
+		public string Title { get; private set; }
 
-		public string ISBN13 { get; set; }
+		public string ISBN13 { get; private set; }
 
-		public int YearRelease { get; set; }
+		public int YearRelease { get; private set; }
 
-		public int CountPages { get; set; }
+		public int CountPages { get; private set; }
 
-		public string Description { get; set; }
+		public string Description { get; private set; }
 
 
 		// Relationships
-		public long PublisherID { get; set; }
+		public long PublisherID { get; private set; }
 
 		// Navigations links
-		public IList<BookAuthor> BookAuthors { get; set; }
+		public IList<BookAuthor> BookAuthors { get; private set; }
 
-		public IList<Category> Categories { get; set; }
+		public IList<Category> Categories { get; private set; }
 
-		public Publisher Publisher { get; set; }
+		public Publisher Publisher { get; private set; }
+
+
+		// Logic
+		public Book(string title, string isbn13, int yearRelese, int countPages, string description)
+		{
+			Title = title;
+
+			ISBN13 = isbn13;
+
+			YearRelease = yearRelese;
+
+			CountPages = countPages;
+
+			Description = description;
+		}
 	}
 }
