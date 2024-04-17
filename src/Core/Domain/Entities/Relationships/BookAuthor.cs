@@ -1,9 +1,9 @@
-﻿using Domain.Entities.Library;
-using Domain.Entities.Creators;
+﻿using Domain.Entities.Creators;
+using Domain.Entities.Aggregates;
 
 namespace Domain.Entities.Relationships
 {
-	public class BookAuthor
+    public class BookAuthor
 	{
 		// Relationships
 		public ulong AuthorID { get; private set; }

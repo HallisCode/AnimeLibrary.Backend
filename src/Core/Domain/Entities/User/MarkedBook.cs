@@ -1,10 +1,10 @@
 ﻿
-using Domain.Entities.Library;
+using Domain.Entities.Aggregates;
 using Domain.Enums;
 
 namespace Domain.Entities.User
 {
-	public class MarkedBook : Entity<ulong>
+    public class MarkedBook : Entity<ulong>
 	{
 		public MarkedBookStatus Status { get; private set; }
 

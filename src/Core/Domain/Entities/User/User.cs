@@ -1,6 +1,4 @@
-﻿using Domain.Exceptions;
-
-namespace Domain.Entities.User
+﻿namespace Domain.Entities.User
 {
 	public class User : Entity<ulong>
 	{

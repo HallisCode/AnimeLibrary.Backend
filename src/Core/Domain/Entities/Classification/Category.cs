@@ -1,10 +1,10 @@
-﻿using Domain.Entities.Library;
+﻿using Domain.Entities.Aggregates;
 using System.Collections.Generic;
 
 
 namespace Domain.Entities.Classification
 {
-	public class Category : Entity<ulong>
+    public class Category : Entity<ulong>
 	{
 		public string Title { get; private set; }
 

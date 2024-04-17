@@ -2,6 +2,6 @@
 {
 	public class Entity<TKeyType>
 	{
-		public TKeyType Id { get; private set; }
+		public TKeyType ID { get; private set; }
 	}
 }
