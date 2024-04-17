@@ -1,5 +1,5 @@
 ﻿using Database.IQuery.Select;
-using Domain.Entities.Library;
+using Domain.Entities.Book;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

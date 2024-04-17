@@ -1,20 +1,19 @@
-﻿using Domain.Entities.Library;
-using Domain.Enums;
+﻿using Domain.Enums;
 
 namespace Domain.Entities.User
 {
     public class MarkedBook : Entity<ulong>
 	{
-		public MarkedBookStatus Status { get; private set; }
+		public MarkedBookStatus Status { get; set; }
 
 
 		// Relationships
-		public ulong UserID { get; private set; }
-		public ulong BookID { get; private set; }
+		public ulong UserID { get; set; }
+		public ulong BookID { get; set; }
 
 		// Navigations links
-		public User User { get; private set; }
-		public Book Book { get; private set; }
+		public User User { get; set; }
+		public Book.Book Book { get; set; }
 
 
 		// Logic

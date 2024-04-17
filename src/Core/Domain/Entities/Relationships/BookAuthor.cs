@@ -1,17 +1,17 @@
 ﻿using Domain.Entities.Creators;
-using Domain.Entities.Library;
+using Domain.Entities.Book;
 
 namespace Domain.Entities.Relationships
 {
     public class BookAuthor
 	{
 		// Relationships
-		public ulong AuthorID { get; private set; }
-		public ulong BookID { get; private set; }
+		public ulong AuthorID { get; set; }
+		public ulong BookID { get; set; }
 
 		// Navigations links
-		public Author Author { get; private set; }
-		public Book Book { get; private set; }
+		public Author Author { get; set; }
+		public Book.Book Book { get; set; }
 
 
 		// Logic
@@ -19,7 +19,7 @@ namespace Domain.Entities.Relationships
 		{
 			AuthorID = authorID;
 
-			bookID = bookID;
+			BookID = bookID;
 		}
 	}
 }

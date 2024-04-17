@@ -1,14 +1,14 @@
 ﻿namespace Domain.Entities.Auth
 {
-	public class Security : Entity
+	public class Security : Entity<ulong>
 	{
-		public string Email { get; private set; }
+		public string Email { get; set; }
 
-		public string Password { get; private set; }
+		public string Password { get; set; }
 
 
 		// Relationships
-		public long UserID { get; private set; }
+		public long UserID { get; set; }
 
 
 		// Logic

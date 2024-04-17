@@ -1,4 +1,4 @@
-﻿using Domain.Entities.Library;
+﻿using Domain.Entities.Book;
 using System.Collections.Generic;
 
 
@@ -10,12 +10,12 @@ namespace Domain.Entities.Classification
 
 
 		// Relationships
-		public ulong? ParentCategoryID { get; private set; }
+		public ulong? ParentCategoryID { get; set; }
 
 		// Navigations links
-		public Category ParentCategory { get; private set; }
-		public IList<Category> SubCategories { get; private set; }
-		public IList<Book> Books { get; private set; }
+		public Category ParentCategory { get; set; }
+		public IList<Category> SubCategories { get; set; }
+		public IList<Book.Book> Books { get; set; }
 
 
 		// Logic

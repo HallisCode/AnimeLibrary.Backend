@@ -8,13 +8,13 @@ namespace Domain.Entities.Auth
 	/// </summary>
 	public class Session : Entity<Guid>
 	{
-		public string AppName { get; private set; }
+		public string AppName { get; set; }
 
 		public DateTime LastUpdate { get; private set; }
 
 
 		// Relationships
-		public ulong UserID { get; private set; }
+		public ulong UserID { get; set; }
 
 
 		// Logic

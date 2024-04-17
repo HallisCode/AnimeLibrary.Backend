@@ -3,30 +3,30 @@ using Domain.Entities.Creators;
 using Domain.Entities.Relationships;
 using System.Collections.Generic;
 
-namespace Domain.Entities.Library
+namespace Domain.Entities.Book
 {
     public class Book : Entity<ulong>
     {
-        public string Title { get; private set; }
+        public string Title { get; set; }
 
-        public string ISBN13 { get; private set; }
+        public string ISBN13 { get; set; }
 
-        public int YearRelease { get; private set; }
+        public int YearRelease { get; set; }
 
-        public int CountPages { get; private set; }
+        public int CountPages { get; set; }
 
-        public string Description { get; private set; }
+        public string Description { get; set; }
 
 
         // Relationships
-        public ulong PublisherID { get; private set; }
+        public ulong PublisherID { get; set; }
 
         // Navigations links
-        public IList<BookAuthor> BookAuthors { get; private set; }
+        public IList<BookAuthor> BookAuthors { get; set; }
 
-        public IList<Category> Categories { get; private set; }
+        public IList<Category> Categories { get; set; }
 
-        public Publisher Publisher { get; private set; }
+        public Publisher Publisher { get; set; }
 
 
         // Logic

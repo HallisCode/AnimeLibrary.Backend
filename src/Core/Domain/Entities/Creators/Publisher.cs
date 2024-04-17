@@ -1,15 +1,15 @@
-﻿using Domain.Entities.Library;
+﻿using Domain.Entities.Book;
 using System.Collections.Generic;
 
 namespace Domain.Entities.Creators
 {
     public class Publisher : Entity<ulong>
 	{
-		public string Title { get; private set; }
+		public string Title { get; set; }
 
 
 		// Navigations links
-		public IList<Book> Books { get; private set; }
+		public IList<Book.Book> Books { get; set; }
 
 
 		// Logic

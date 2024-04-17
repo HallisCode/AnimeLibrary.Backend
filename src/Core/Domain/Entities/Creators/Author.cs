@@ -6,15 +6,15 @@ namespace Domain.Entities.Creators
 {
 	public class Author : Entity<ulong>
 	{
-		public string Name { get; private set; }
+		public string Name { get; set; }
 
-		public string LastName { get; private set; }
+		public string LastName { get; set; }
 
-		public DateOnly DateBirth { get; private set; }
+		public DateOnly DateBirth { get; set; }
 
-		public DateOnly DateDeath { get; private set; }
+		public DateOnly DateDeath { get; set; }
 
-		public string Description { get; private set; }
+		public string Description { get; set; }
 
 
 		// Navigations links

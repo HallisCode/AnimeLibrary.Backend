@@ -1,13 +1,13 @@
-﻿namespace Domain.Entities.Library
+﻿namespace Domain.Entities.Book
 {
 	public class Rating : Entity<ulong>
 	{
-		public double Score { get; private set; }
+		public double Score { get; set; }
 
 
 		// Relationships
-		public ulong UserID { get; private set; }
-		public ulong BookID { get; private set; }
+		public ulong UserID { get; set; }
+		public ulong BookID { get; set; }
 
 
 		// Logic

@@ -2,7 +2,7 @@
 {
 	public class User : Entity<ulong>
 	{
-		public string Username { get; private set; }
+		public string Username { get; set; }
 
 
 		// Logic
