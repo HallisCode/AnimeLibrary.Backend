@@ -3,21 +3,22 @@
 
 namespace Domain.Entities.Auth
 {
-	public class Session
+	/// <summary>
+	/// Представляет собой сущность, которая описывает сессию пользователя через какое-либо приложение.
+	/// </summary>
+	public class Session : Entity<Guid>
 	{
-		public Guid ID { get; private set; }
-
 		public string AppName { get; private set; }
 
 		public DateTime LastUpdate { get; private set; }
 
 
 		// Relationships
-		public long UserID { get; private set; }
+		public ulong UserID { get; private set; }
 
 
 		// Logic
-		public Session(string appName, long userID)
+		public Session(string appName, ulong userID)
 		{
 			AppName = appName;
 

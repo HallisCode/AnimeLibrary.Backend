@@ -4,13 +4,13 @@ using System.Collections.Generic;
 
 namespace Domain.Entities.Classification
 {
-	public class Category : Entity
+	public class Category : Entity<ulong>
 	{
 		public string Title { get; private set; }
 
 
 		// Relationships
-		public long? ParentCategoryID { get; private set; }
+		public ulong? ParentCategoryID { get; private set; }
 
 		// Navigations links
 		public Category ParentCategory { get; private set; }
@@ -19,7 +19,7 @@ namespace Domain.Entities.Classification
 
 
 		// Logic
-		public Category(string title, long? parentCategoryID=null)
+		public Category(string title, ulong? parentCategoryID=null)
 		{
 			Title = title;
 

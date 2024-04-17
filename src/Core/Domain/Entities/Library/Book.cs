@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Domain.Entities.Library
 {
-	public class Book : Entity
+	public class Book : Entity<ulong>
 	{
 		public string Title { get; private set; }
 
@@ -19,7 +19,7 @@ namespace Domain.Entities.Library
 
 
 		// Relationships
-		public long PublisherID { get; private set; }
+		public ulong PublisherID { get; private set; }
 
 		// Navigations links
 		public IList<BookAuthor> BookAuthors { get; private set; }
@@ -30,7 +30,7 @@ namespace Domain.Entities.Library
 
 
 		// Logic
-		public Book(string title, string isbn13, int yearRelese, int countPages, string description)
+		public Book(string title, string isbn13, int yearRelese, int countPages, string description, ulong publisherID)
 		{
 			Title = title;
 
@@ -41,6 +41,8 @@ namespace Domain.Entities.Library
 			CountPages = countPages;
 
 			Description = description;
+
+			PublisherID = publisherID;
 		}
 	}
 }

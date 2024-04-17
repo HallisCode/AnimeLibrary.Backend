@@ -4,14 +4,14 @@ using Domain.Enums;
 
 namespace Domain.Entities.User
 {
-	public class MarkedBook : Entity
+	public class MarkedBook : Entity<ulong>
 	{
 		public MarkedBookStatus Status { get; private set; }
 
 
 		// Relationships
-		public long UserID { get; private set; }
-		public long BookID { get; private set; }
+		public ulong UserID { get; private set; }
+		public ulong BookID { get; private set; }
 
 		// Navigations links
 		public User User { get; private set; }
@@ -19,7 +19,7 @@ namespace Domain.Entities.User
 
 
 		// Logic
-		public MarkedBook(MarkedBookStatus status, long userID, long bookID)
+		public MarkedBook(MarkedBookStatus status, ulong userID, ulong bookID)
 		{
 			Status = status;
 
