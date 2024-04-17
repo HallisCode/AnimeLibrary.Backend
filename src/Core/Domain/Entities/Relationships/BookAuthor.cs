@@ -6,8 +6,8 @@ namespace Domain.Entities.Relationships
 	public class BookAuthor
 	{
 		// Relationships
-		public long AuthorID { get; private set; }
-		public long BookID { get; private set; }
+		public ulong AuthorID { get; private set; }
+		public ulong BookID { get; private set; }
 
 		// Navigations links
 		public Author Author { get; private set; }
@@ -15,7 +15,7 @@ namespace Domain.Entities.Relationships
 
 
 		// Logic
-		public BookAuthor(long authorID, long bookID)
+		public BookAuthor(ulong authorID, ulong bookID)
 		{
 			AuthorID = authorID;
 

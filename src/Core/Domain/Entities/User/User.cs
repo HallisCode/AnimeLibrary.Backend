@@ -2,7 +2,7 @@
 
 namespace Domain.Entities.User
 {
-	public class User : Entity
+	public class User : Entity<ulong>
 	{
 		public string Username { get; private set; }
 

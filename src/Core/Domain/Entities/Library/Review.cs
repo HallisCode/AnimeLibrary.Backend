@@ -3,7 +3,7 @@ using Domain.Enums;
 
 namespace Domain.Entities.Library
 {
-	public class Review : Entity
+	public class Review : Entity<ulong>
 	{
 		public string Content { get; private set; }
 
@@ -11,8 +11,8 @@ namespace Domain.Entities.Library
 
 
 		// Relationships
-		public long UserID { get; private set; }
-		public long BookID { get; private set; }
+		public ulong UserID { get; private set; }
+		public ulong BookID { get; private set; }
 
 		// Navigations links
 		public User.User User { get; private set; }
@@ -20,7 +20,7 @@ namespace Domain.Entities.Library
 
 
 		// Logic
-		public Review(string content, long userID, long bookID, ReviewType type = ReviewType.Neutral)
+		public Review(string content, ulong userID, ulong bookID, ReviewType type = ReviewType.Neutral)
 		{
 			Content = content;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Domain.Entities.Creators
 {
-	public class Publisher : Entity
+	public class Publisher : Entity<ulong>
 	{
 		public string Title { get; private set; }
 

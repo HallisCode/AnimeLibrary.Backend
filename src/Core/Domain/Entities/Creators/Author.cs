@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Domain.Entities.Creators
 {
-	public class Author : Entity
+	public class Author : Entity<ulong>
 	{
 		public string Name { get; private set; }
 
