@@ -1,5 +1,5 @@
 ﻿using Domain.Entities.Creators;
-using Domain.Entities.Aggregates;
+using Domain.Entities.Library;
 
 namespace Domain.Entities.Relationships
 {

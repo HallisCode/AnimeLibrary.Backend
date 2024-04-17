@@ -1,5 +1,4 @@
-﻿using Domain.Entities.Aggregates;
-using Domain.Entities.User;
+﻿using Domain.Entities.User;
 using Domain.Enums;
 
 namespace Domain.Entities.Library
