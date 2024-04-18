@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Domain.Entities.Creators
 {
-	public class Author : Entity
+	public class Author : Entity<ulong>
 	{
 		public string Name { get; set; }
 
@@ -18,6 +18,21 @@ namespace Domain.Entities.Creators
 
 
 		// Navigations links
-		public IList<BookAuthor> BookAuthors { get; set; }
+		public IList<BookAuthor> BookAuthors { get; private set; }
+
+
+		// Logic
+		public Author(string name, string lastName, DateOnly dateBirth, DateOnly dateDeath, string description)
+		{
+			Name = name;
+
+			LastName = lastName;
+
+			DateBirth = dateBirth;
+
+			DateDeath = dateDeath;
+
+			Description = description;
+		}
 	}
 }

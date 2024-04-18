@@ -1,7 +1,7 @@
 ﻿namespace Domain.Entities
 {
-	public class Entity
+	public class Entity<TKeyType>
 	{
-		public ulong Id { get; set; }
+		public TKeyType ID { get; private set; }
 	}
 }
