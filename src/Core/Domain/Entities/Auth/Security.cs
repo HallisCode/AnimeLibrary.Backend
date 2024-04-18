@@ -1,5 +1,6 @@
 ﻿namespace Domain.Entities.Auth
 {
+
 	public class Security : Entity<ulong>
 	{
 		public string Email { get; set; }

@@ -1,4 +1,5 @@
-﻿using Domain.Entities.Book_;
+using Domain.Entities.Book_;
+
 using System.Collections.Generic;
 
 namespace Domain.Entities.Creators
