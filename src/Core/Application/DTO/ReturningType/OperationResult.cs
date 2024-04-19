@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Application.DTO.ReturningType
 {
@@ -44,6 +45,11 @@ namespace Application.DTO.ReturningType
 		public static implicit operator OperationResult(Exception exception)
 		{
 			return Failure(exception);
+		}
+
+		public static implicit operator Task<OperationResult>(OperationResult operationResult)
+		{
+			return Task.FromResult(operationResult);
 		}
 	}
 
@@ -114,6 +120,11 @@ namespace Application.DTO.ReturningType
 		public static implicit operator OperationResult<TValue>(Exception exception)
 		{
 			return Failure(exception);
+		}
+
+		public static implicit operator Task<OperationResult<TValue>>(OperationResult<TValue> operationResult)
+		{
+			return Task.FromResult(operationResult);
 		}
 	}
 }
