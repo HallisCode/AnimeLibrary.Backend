@@ -1,5 +1,4 @@
-﻿using Application.DTO.Requests.Book_;
-using Application.DTO.Responses.Book_;
+﻿using Application.DTO.Book_;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -7,15 +6,14 @@ namespace Application.IServices.Book_
 {
 	public interface IBookService
 	{
-		Task<List<BookDTO>> FindBooksAsync(FindBooksDTO findBooksDTO);
+		Task<List<BookResponse>> FindBooksAsync(FindBooksRequest request);
 
-		Task<BookDTO> GetBookAsync(ulong ID);
+		Task<BookResponse> GetBookAsync(ulong ID);
 
-		Task<BookDTO> CreateBookAsync(CreateBookDTO createBookDTO);
+		Task<BookResponse> CreateBookAsync(ulong userID, CreateBookRequest request);
 
-		Task UpdateBookAsync(UpdateBookDTO updateBookDTO);
+		Task UpdateBookAsync(ulong userID, UpdateBookRequest request);
 
-		Task DeleteBookAsync(ulong bookID);
-
+		Task DeleteBookAsync(ulong userID, DeleteBookRequest request);
 	}
 }

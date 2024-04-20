@@ -1,6 +1,6 @@
 ﻿namespace Application.Maintenance.Implementations
 {
-    internal class SessionCleaner
-    {
-    }
+	internal class SessionCleaner
+	{
+	}
 }

@@ -1,6 +1,6 @@
 ﻿namespace Application.Maintenance.Interfaces
 {
-    internal class ISessionCleaner
-    {
-    }
+	internal class ISessionCleaner
+	{
+	}
 }
