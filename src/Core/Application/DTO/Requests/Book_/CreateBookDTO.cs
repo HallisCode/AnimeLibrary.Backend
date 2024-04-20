@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.DTO.Requests
+namespace Application.DTO.Requests.Book_
 {
-	internal class AddReview
+	public record CreateBookDTO
 	{
 	}
 }
