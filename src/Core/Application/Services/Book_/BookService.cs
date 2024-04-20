@@ -1,5 +1,4 @@
-﻿using Application.DTO.Requests.Book_;
-using Application.DTO.Responses.Book_;
+﻿using Application.DTO.Book_;
 using Application.IServices.Book_;
 using System;
 using System.Collections.Generic;
@@ -9,7 +8,7 @@ namespace Application.Services.Book_
 {
 	internal class BookService : IBookService
 	{
-		public Task<BookDTO> CreateBookAsync(CreateBookDTO createBookDTO)
+		public Task<BookResponse> CreateBookAsync(CreateBookRequest createBookDTO)
 		{
 			throw new NotImplementedException();
 		}
@@ -19,17 +18,17 @@ namespace Application.Services.Book_
 			throw new NotImplementedException();
 		}
 
-		public Task<List<BookDTO>> FindBooksAsync(FindBooksDTO findBooksDTO)
+		public Task<List<BookResponse>> FindBooksAsync(FindBooksRequest findBooksDTO)
 		{
 			throw new NotImplementedException();
 		}
 
-		public Task<BookDTO> GetBookAsync(ulong ID)
+		public Task<BookResponse> GetBookAsync(ulong ID)
 		{
 			throw new NotImplementedException();
 		}
 
-		public Task UpdateBookAsync(UpdateBookDTO updateBookDTO)
+		public Task UpdateBookAsync(UpdateBookRequest updateBookDTO)
 		{
 			throw new NotImplementedException();
 		}
