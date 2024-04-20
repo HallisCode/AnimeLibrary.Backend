@@ -6,7 +6,7 @@ namespace Application.Exceptions
 	{
 		public ApplicationException(string message) : base(message)
 		{
-			
+
 		}
 
 		public ApplicationException(string message, Exception innerException) : base(message, innerException)
