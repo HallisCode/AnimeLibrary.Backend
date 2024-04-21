@@ -1,24 +1,26 @@
 ﻿using Application.DTO.Book_;
 using Application.IServices.Book_;
+using Database.IRepositories.Book_;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Application.Services.Book_
 {
-	internal class BookService : IBookService
+	public class BookService : IBookService
 	{
-		public Task<BookResponse> CreateBookAsync(CreateBookRequest createBookDTO)
+
+		public Task<BookResponse> CreateBookAsync(ulong userID, CreateBookRequest request)
 		{
 			throw new NotImplementedException();
 		}
 
-		public Task DeleteBookAsync(ulong bookID)
+		public Task DeleteBookAsync(ulong userID, DeleteBookRequest request)
 		{
 			throw new NotImplementedException();
 		}
 
-		public Task<List<BookResponse>> FindBooksAsync(FindBooksRequest findBooksDTO)
+		public Task<List<BookResponse>> FindBooksAsync(FindBooksRequest request)
 		{
 			throw new NotImplementedException();
 		}
@@ -28,7 +30,7 @@ namespace Application.Services.Book_
 			throw new NotImplementedException();
 		}
 
-		public Task UpdateBookAsync(UpdateBookRequest updateBookDTO)
+		public Task UpdateBookAsync(ulong userID, UpdateBookRequest request)
 		{
 			throw new NotImplementedException();
 		}
