@@ -1,6 +1,5 @@
 
 ﻿using Domain.Entities.Book_;
-
 using System.Collections.Generic;
 
 
@@ -8,7 +7,7 @@ namespace Domain.Entities.Classification
 {
     public class Category : Entity<ulong>
 	{
-		public string Title { get; private set; }
+		public string Title { get; set; }
 
 
 		// Relationships

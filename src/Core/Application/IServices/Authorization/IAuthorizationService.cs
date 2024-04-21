@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Maintenance.Implementations.Auth
+namespace Application.IServices.Authorization
 {
-    internal class SessionCleaner
-    {
-    }
+	public interface IAuthorizationService
+	{
+	}
 }

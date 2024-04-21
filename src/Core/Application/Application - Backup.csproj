@@ -12,7 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\Auth\" />
+    <Folder Include="DTO\" />
+    <Folder Include="Services\Implementations\" />
+    <Folder Include="Services\Interfaces\Book\" />
   </ItemGroup>
 
 </Project>

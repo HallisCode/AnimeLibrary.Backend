@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Database.IRepositories.Auth
 {
-    public interface ISessionRepository :
-        IQuerySelectFirst<Session>, IQuerySelectAll<Session>, IQueryCreate<Session>,
-        IQueryDeleteFirst<Session>, IQueryDeleteAll<Session>
-    {
+	public interface ISessionRepository : IBaseOperations<Session>,
+		IQuerySelectAll<Session>, IQueryDeleteAll<Session>
+	{
 
-    }
+	}
 }

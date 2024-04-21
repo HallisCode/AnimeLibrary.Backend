@@ -1,8 +1,11 @@
-﻿namespace Domain.Entities.Book_
+﻿using Domain.Validation.Models;
+using FluentValidation;
+
+namespace Domain.Entities.Book_
 {
 	public class Rating : Entity<ulong>
 	{
-		public double Score { get; set; }
+		public ValueObjects.Rating Score { get; set; }
 
 
 		// Relationships
@@ -11,13 +14,20 @@
 
 
 		// Logic
-		public Rating(double score, ulong userID, ulong bookID)
+		public Rating(ValueObjects.Rating score, ulong userID, ulong bookID)
 		{
 			Score = score;
 
 			UserID = userID;
 
 			BookID = bookID;
+		}
+
+		protected override void Validate()
+		{
+			IValidator<Rating> validator = new RatingValidator();
+
+			validator.ValidateAndThrow(this);
 		}
 	}
 }
