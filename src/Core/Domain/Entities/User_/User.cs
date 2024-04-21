@@ -1,12 +1,14 @@
 ﻿using Domain.Enums;
+using Domain.RoleRules.Entities;
+using Domain.RoleRules.Enums;
 
 namespace Domain.Entities.User_
 {
-	public class User : Entity<ulong>
+    public class User : Entity<ulong>
 	{
 		public string Username { get; set; }
 
-		public UserRole Role { get; set; }
+		public Role Role { get; set; }
 
 
 		// Logic
@@ -14,7 +16,7 @@ namespace Domain.Entities.User_
 		{
 			Username = username;
 
-			Role = UserRole.User;
+			Role = RoleType.User;
 		}
 
 	}
