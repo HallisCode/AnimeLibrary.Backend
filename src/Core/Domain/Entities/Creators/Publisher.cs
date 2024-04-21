@@ -1,10 +1,9 @@
 using Domain.Entities.Book_;
-using Domain.IEntites.Creators;
 using System.Collections.Generic;
 
 namespace Domain.Entities.Creators
 {
-	public class Publisher : Entity<ulong>, IPublisher
+	public class Publisher : Entity<ulong>
 	{
 		public string Name { get; set; }
 

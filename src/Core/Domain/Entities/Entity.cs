@@ -1,7 +1,9 @@
 ﻿namespace Domain.Entities
 {
-	public class Entity<TKeyType>
+	public abstract class Entity<TKeyType>
 	{
 		public TKeyType ID { get; private set; }
+
+		protected abstract void Validate();
 	}
 }
