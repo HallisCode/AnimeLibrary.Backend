@@ -2,8 +2,8 @@
 
 namespace Application.IServices.User_
 {
-	public interface IUserService
-	{
-		Task ChangeUsernameAsync();
-	}
+    public interface IUserService
+    {
+        Task ChangeUsernameAsync();
+    }
 }
