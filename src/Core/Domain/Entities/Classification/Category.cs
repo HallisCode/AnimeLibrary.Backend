@@ -1,14 +1,14 @@
 
 ﻿using Domain.Entities.Book_;
-
+using Domain.IEntites.Classification;
 using System.Collections.Generic;
 
 
 namespace Domain.Entities.Classification
 {
-    public class Category : Entity<ulong>
+    public class Category : Entity<ulong>, ICategory
 	{
-		public string Title { get; private set; }
+		public string Title { get; set; }
 
 
 		// Relationships

@@ -1,6 +1,8 @@
-﻿namespace Domain.Entities.Book_
+﻿using Domain.IEntites.Book_;
+
+namespace Domain.Entities.Book_
 {
-	public class Rating : Entity<ulong>
+	public class Rating : Entity<ulong>, IRating
 	{
 		public double Score { get; set; }
 

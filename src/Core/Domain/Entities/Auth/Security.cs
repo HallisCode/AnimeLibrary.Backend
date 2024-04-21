@@ -1,7 +1,9 @@
-﻿namespace Domain.Entities.Auth
+﻿using Domain.IEntites.Auth;
+
+namespace Domain.Entities.Auth
 {
 
-	public class Security : Entity<ulong>
+	public class Security : Entity<ulong>, ISecurity
 	{
 		public string Email { get; set; }
 

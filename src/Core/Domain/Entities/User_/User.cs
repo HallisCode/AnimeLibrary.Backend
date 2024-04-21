@@ -1,10 +1,10 @@
-﻿using Domain.Enums;
+﻿using Domain.IEntites.User_;
 using Domain.RoleRules.Entities;
 using Domain.RoleRules.Enums;
 
 namespace Domain.Entities.User_
 {
-    public class User : Entity<ulong>
+    public class User : Entity<ulong>, IUser
 	{
 		public string Username { get; set; }
 

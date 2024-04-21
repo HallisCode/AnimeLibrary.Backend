@@ -1,9 +1,10 @@
 ﻿using Domain.Entities.User_;
 using Domain.Enums;
+using Domain.IEntites.Book_;
 
 namespace Domain.Entities.Book_
 {
-    public class Review : Entity<ulong>
+	public class Review : Entity<ulong>, IReview
 	{
 		public string Content { get; set; }
 

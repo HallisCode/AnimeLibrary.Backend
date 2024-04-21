@@ -1,22 +1,22 @@
 using Domain.Entities.Book_;
-
+using Domain.IEntites.Creators;
 using System.Collections.Generic;
 
 namespace Domain.Entities.Creators
 {
-    public class Publisher : Entity<ulong>
+	public class Publisher : Entity<ulong>, IPublisher
 	{
-		public string Title { get; set; }
+		public string Name { get; set; }
 
 
 		// Navigations links
-		public IList<Book_.Book> Books { get; set; }
+		public IList<Book> Books { get; set; }
 
 
 		// Logic
 		public Publisher(string title)
 		{
-			Title = title;
+			Name = title;
 		}
 	}
 }
