@@ -1,21 +1,39 @@
 using Domain.Entities.Book_;
+using Domain.Validation.Models.Creators;
+using FluentValidation;
 using System.Collections.Generic;
 
 namespace Domain.Entities.Creators
 {
 	public class Publisher : Entity<ulong>
 	{
-		public string Name { get; set; }
+		public string Name { get; private set; }
 
 
 		// Navigations links
-		public IList<Book> Books { get; set; }
+		public IList<Book> Books { get; private set; }
 
 
 		// Logic
-		public Publisher(string title)
+		public Publisher(string name)
 		{
-			Name = title;
+			Name = name;
+
+			Validate();
+		}
+
+		public void Update(string name)
+		{
+			Name = name;
+
+			Validate();
+		}
+
+		protected override void Validate()
+		{
+			IValidator<Publisher> validator = new PublisherValidator();
+
+			validator.ValidateAndThrow(this);
 		}
 	}
 }

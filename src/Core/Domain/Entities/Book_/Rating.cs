@@ -5,7 +5,7 @@ namespace Domain.Entities.Book_
 {
 	public class Rating : Entity<ulong>
 	{
-		public ValueObjects.Rating Score { get; set; }
+		public ValueObjects.Rating Score { get; private set; }
 
 
 		// Relationships
@@ -21,6 +21,15 @@ namespace Domain.Entities.Book_
 			UserID = userID;
 
 			BookID = bookID;
+
+			Validate();
+		}
+
+		public void Update(ValueObjects.Rating rating)
+		{
+			Score = rating;
+
+			Validate();
 		}
 
 		protected override void Validate()

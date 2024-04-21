@@ -32,11 +32,16 @@ namespace Domain.Entities.Book_
 
 
 		// Logic
-		public Book(
-			string title, string isbn13 = null,
-			int? yearRelese = null, int? countPages = null,
-			string description = null, ulong? publisherID = null,
-			IList<Author> authors = null, IList<Category> categories = null
+		public Book
+			(
+			string title,
+			string isbn13 = null,
+			int? yearRelese = null,
+			int? countPages = null,
+			string description = null,
+			ulong? publisherID = null,
+			IList<Author> authors = null,
+			IList<Category> categories = null
 			)
 		{
 			Title = title;
@@ -58,11 +63,16 @@ namespace Domain.Entities.Book_
 			Validate();
 		}
 
-		public void Update(
-			string title = null, string isbn13 = null,
-			int? yearRelese = null, int? countPages = null,
-			string description = null, ulong? publisherID = null,
-			IList<Author> authors = null, IList<Category> categories = null
+		public void Update
+			(
+			string title = null,
+			string isbn13 = null,
+			int? yearRelese = null,
+			int? countPages = null,
+			string description = null,
+			ulong? publisherID = null,
+			IList<Author> authors = null,
+			IList<Category> categories = null
 			)
 		{
 			if (title is not null) Title = title;

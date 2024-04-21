@@ -1,4 +1,6 @@
 ﻿using Domain.Entities.Relationships;
+using Domain.Validation.Models.Creators;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 
@@ -6,15 +8,15 @@ namespace Domain.Entities.Creators
 {
 	public class Author : Entity<ulong>
 	{
-		public string Name { get; set; }
+		public string Name { get; private set; }
 
-		public string LastName { get; set; }
+		public string LastName { get; private set; }
 
-		public DateOnly DateBirth { get; set; }
+		public DateOnly? DateBirth { get; private set; }
 
-		public DateOnly DateDeath { get; set; }
+		public DateOnly? DateDeath { get; private set; }
 
-		public string Description { get; set; }
+		public string Description { get; private set; }
 
 
 		// Navigations links
@@ -22,7 +24,14 @@ namespace Domain.Entities.Creators
 
 
 		// Logic
-		public Author(string name, string lastName, DateOnly dateBirth, DateOnly dateDeath, string description)
+		public Author
+			(
+			string name,
+			string lastName,
+			DateOnly dateBirth,
+			DateOnly dateDeath,
+			string description
+			)
 		{
 			Name = name;
 
@@ -33,6 +42,38 @@ namespace Domain.Entities.Creators
 			DateDeath = dateDeath;
 
 			Description = description;
+
+			Validate();
+		}
+
+		public void Update
+			(
+			string name = null,
+			string lastName = null,
+			DateOnly? dateBirth = null,
+			DateOnly? dateDeath = null,
+			string description = null
+			)
+		{
+			if (name is not null) Name = name;
+
+			if (lastName is not null) LastName = lastName;
+
+			if (dateBirth is not null) DateBirth = (DateOnly)dateBirth;
+
+			if (dateDeath is not null) DateDeath = (DateOnly)dateDeath;
+
+			if (description is not null) Description = description;
+
+			Validate();
+
+		}
+
+		protected override void Validate()
+		{
+			IValidator<Author> validator = new AuthorValidator();
+
+			validator.ValidateAndThrow(this);
 		}
 	}
 }
