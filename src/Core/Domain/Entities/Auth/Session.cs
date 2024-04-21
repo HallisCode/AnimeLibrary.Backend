@@ -8,13 +8,13 @@ namespace Domain.Entities.Auth
 	/// </summary>
 	public class Session : Entity<Guid>
 	{
-		public string AppName { get; set; }
+		public string AppName { get; private set; }
 
 		public DateTime LastUpdate { get; private set; }
 
 
 		// Relationships
-		public ulong UserID { get; set; }
+		public ulong UserID { get; private set; }
 
 
 		// Logic
@@ -25,11 +25,15 @@ namespace Domain.Entities.Auth
 			UserID = userID;
 
 			LastUpdate = DateTime.UtcNow;
+
+			Validate();
 		}
 
 		public void Appear()
 		{
 			LastUpdate = DateTime.UtcNow;
 		}
+
+		protected override void Validate() { }
 	}
 }

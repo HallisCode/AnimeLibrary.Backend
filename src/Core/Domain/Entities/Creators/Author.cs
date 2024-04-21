@@ -1,11 +1,10 @@
 ﻿using Domain.Entities.Relationships;
-using Domain.IEntites.Creators;
 using System;
 using System.Collections.Generic;
 
 namespace Domain.Entities.Creators
 {
-	public class Author : Entity<ulong>, IAuthor
+	public class Author : Entity<ulong>
 	{
 		public string Name { get; set; }
 

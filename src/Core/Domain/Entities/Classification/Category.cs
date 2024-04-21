@@ -1,12 +1,11 @@
 
 ﻿using Domain.Entities.Book_;
-using Domain.IEntites.Classification;
 using System.Collections.Generic;
 
 
 namespace Domain.Entities.Classification
 {
-    public class Category : Entity<ulong>, ICategory
+    public class Category : Entity<ulong>
 	{
 		public string Title { get; set; }
 
