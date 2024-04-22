@@ -29,7 +29,6 @@ namespace Domain.Entities.Classification
 
 			ParentCategoryID = parentCategoryID;
 
-			Validate();
 		}
 
 		public void Update(string title = null, ulong? parentCategoryID = null)
@@ -38,14 +37,6 @@ namespace Domain.Entities.Classification
 
 			if (parentCategoryID is not null) ParentCategoryID = parentCategoryID;
 
-			Validate();
-		}
-
-		protected override void Validate()
-		{
-			IValidator<Category> validator = new CategoryValidator();
-
-			validator.ValidateAndThrow(this);
 		}
 	}
 }

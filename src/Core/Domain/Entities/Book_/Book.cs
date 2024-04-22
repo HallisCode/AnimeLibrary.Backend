@@ -59,8 +59,6 @@ namespace Domain.Entities.Book_
 			if (categories is not null) Categories = categories;
 
 			if (authors is not null) ChangeAuthors(authors);
-
-			Validate();
 		}
 
 		public void Update
@@ -90,8 +88,6 @@ namespace Domain.Entities.Book_
 			if (categories is not null) Categories = categories;
 
 			if (authors is not null) ChangeAuthors(authors);
-
-			Validate();
 		}
 
 		private void ChangeAuthors(IList<Author> authors)
@@ -102,13 +98,6 @@ namespace Domain.Entities.Book_
 			{
 				BookAuthors.Add(new BookAuthor(authorID: author.ID, bookID: this.ID));
 			}
-		}
-
-		protected override void Validate()
-		{
-			IValidator<Book> validator = new BookValidator();
-
-			validator.ValidateAndThrow(this);
 		}
 	}
 }

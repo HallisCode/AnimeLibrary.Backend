@@ -42,8 +42,6 @@ namespace Domain.Entities.Creators
 			DateDeath = dateDeath;
 
 			Description = description;
-
-			Validate();
 		}
 
 		public void Update
@@ -64,16 +62,6 @@ namespace Domain.Entities.Creators
 			if (dateDeath is not null) DateDeath = (DateOnly)dateDeath;
 
 			if (description is not null) Description = description;
-
-			Validate();
-
-		}
-
-		protected override void Validate()
-		{
-			IValidator<Author> validator = new AuthorValidator();
-
-			validator.ValidateAndThrow(this);
 		}
 	}
 }

@@ -18,22 +18,11 @@ namespace Domain.Entities.Creators
 		public Publisher(string name)
 		{
 			Name = name;
-
-			Validate();
 		}
 
 		public void Update(string name)
 		{
 			Name = name;
-
-			Validate();
-		}
-
-		protected override void Validate()
-		{
-			IValidator<Publisher> validator = new PublisherValidator();
-
-			validator.ValidateAndThrow(this);
 		}
 	}
 }

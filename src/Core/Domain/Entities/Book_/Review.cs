@@ -24,9 +24,9 @@ namespace Domain.Entities.Book_
 		// Logic
 		public Review
 			(
-			string content, 
+			string content,
 			ulong userID,
-			ulong bookID, 
+			ulong bookID,
 			ReviewType type = ReviewType.Neutral
 			)
 		{
@@ -37,8 +37,6 @@ namespace Domain.Entities.Book_
 			UserID = userID;
 
 			BookID = bookID;
-
-			Validate();
 		}
 
 		public void Update(string content = null, ReviewType? type = null)
@@ -46,15 +44,6 @@ namespace Domain.Entities.Book_
 			if (content is not null) Content = content;
 
 			if (type is not null) Type = (ReviewType)type;
-
-			Validate();
-		}
-
-		protected override void Validate()
-		{
-			IValidator<Review> validator = new ReviewValidator();
-
-			validator.ValidateAndThrow(this);
 		}
 	}
 }

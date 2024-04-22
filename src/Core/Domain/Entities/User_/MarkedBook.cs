@@ -31,10 +31,5 @@ namespace Domain.Entities.User_
 		{
 			Status = status;
 		}
-
-		protected override void Validate()
-		{
-			throw new System.NotImplementedException();
-		}
 	}
 }

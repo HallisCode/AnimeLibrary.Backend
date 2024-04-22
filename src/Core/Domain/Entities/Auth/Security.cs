@@ -21,8 +21,6 @@ namespace Domain.Entities.Auth
 			Email = email;
 
 			Password = password;
-
-			Validate();
 		}
 
 		public void Update(string email = null, string password = null)
@@ -30,15 +28,6 @@ namespace Domain.Entities.Auth
 			if (email is not null) Email = email;
 
 			if (password is not null) Password = password;
-
-			Validate();
-		}
-
-		protected override void Validate()
-		{
-			IValidator<Security> validator = new SecurityValidator();
-
-			validator.ValidateAndThrow(this);
 		}
 	}
 }
