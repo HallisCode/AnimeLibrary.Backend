@@ -1,9 +1,10 @@
 ﻿using FluentValidation;
 using System.Text.RegularExpressions;
 
-namespace Domain.Validation.Properties
+
+namespace Domain.ValidationRules.User_
 {
-    public static class UsernameValidator
+    public static class UsernameRule
     {
         private static Regex allowedSymbols = new Regex("^[a-zA-Z0-9_]+$");
 
@@ -29,18 +30,18 @@ namespace Domain.Validation.Properties
                     context.AddFailure("Знак нижнего подчеркивания не должен идти более одного раза подряд.");
                 }
 
-                if(field.Length < 5)
+                if (field.Length < 5)
                 {
                     context.AddFailure("Длина не может быть меньше 5 символов.");
                 }
 
-				if (field.Length > 32)
-				{
-					context.AddFailure("Длина не может быть больше 32 символов.");
-				}
-			});
+                if (field.Length > 32)
+                {
+                    context.AddFailure("Длина не может быть больше 32 символов.");
+                }
+            });
         }
-	}
+    }
 
 
 }
