@@ -6,9 +6,9 @@ namespace Domain.ValidationRules.Classification
 {
 	public static class RatingRule
 	{
-		public static IRuleBuilderOptions<T, Rating> Rating<T>(this IRuleBuilder<T, Rating> ruleBuilder)
+		public static IRuleBuilderOptions<T, DecimalRating> Rating<T>(this IRuleBuilder<T, DecimalRating> ruleBuilder)
 		{
-			return ruleBuilder.InclusiveBetween(new ValueObjects.Rating(0), new ValueObjects.Rating(10)); ;
+			return ruleBuilder.InclusiveBetween(new ValueObjects.DecimalRating(0), new ValueObjects.DecimalRating(10)); ;
 		}
 	}
 }
