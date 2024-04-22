@@ -21,22 +21,12 @@ namespace Domain.Entities.Book_
 			UserID = userID;
 
 			BookID = bookID;
-
-			Validate();
 		}
 
 		public void Update(ValueObjects.Rating rating)
 		{
 			Score = rating;
 
-			Validate();
-		}
-
-		protected override void Validate()
-		{
-			IValidator<Rating> validator = new RatingValidator();
-
-			validator.ValidateAndThrow(this);
 		}
 	}
 }

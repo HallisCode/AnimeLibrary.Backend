@@ -25,15 +25,11 @@ namespace Domain.Entities.Auth
 			UserID = userID;
 
 			LastUpdate = DateTime.UtcNow;
-
-			Validate();
 		}
 
 		public void Appear()
 		{
 			LastUpdate = DateTime.UtcNow;
 		}
-
-		protected override void Validate() { }
 	}
 }
