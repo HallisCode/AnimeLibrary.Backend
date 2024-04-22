@@ -5,7 +5,7 @@ namespace Domain.Entities.Book_
 {
 	public class Rating : Entity<ulong>
 	{
-		public ValueObjects.Rating Score { get; private set; }
+		public ValueObjects.DecimalRating Score { get; private set; }
 
 
 		// Relationships
@@ -14,7 +14,7 @@ namespace Domain.Entities.Book_
 
 
 		// Logic
-		public Rating(ValueObjects.Rating score, ulong userID, ulong bookID)
+		public Rating(ValueObjects.DecimalRating score, ulong userID, ulong bookID)
 		{
 			Score = score;
 
@@ -23,7 +23,7 @@ namespace Domain.Entities.Book_
 			BookID = bookID;
 		}
 
-		public void Update(ValueObjects.Rating rating)
+		public void Update(ValueObjects.DecimalRating rating)
 		{
 			Score = rating;
 
