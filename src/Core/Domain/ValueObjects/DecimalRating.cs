@@ -3,7 +3,7 @@
 namespace Domain.ValueObjects
 {
 	/// <summary>
-	/// Описывает класс
+	/// Описывает сущность десятичной оценки. Может принимать значение от 0 до 10 включительно.
 	/// </summary>
 	public record DecimalRating : IComparable<DecimalRating>, IComparable
 	{
