@@ -4,6 +4,6 @@ namespace Database.IQuery
 {
 	public interface IQueryCreate<TEntity>
 	{
-		Task<TEntity> CreateAsync(TEntity entity);
+		Task CreateAsync(TEntity entity);
 	}
 }
