@@ -7,7 +7,7 @@ using System;
 
 namespace Database.IUnitOfWork
 {
-	public interface IUnitOfWork : IDisposable
+	public interface IUnitOfWork
 	{
 		ISecurityRepository Security { get; }
 		ISessionRepository Session { get; }
