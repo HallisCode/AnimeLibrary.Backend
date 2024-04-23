@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Database.IUnitOfWork
 {
-	public interface IUnitOfWork : IDisposable
+	public interface IUnitOfWork
 	{
 		ISecurityRepository Security { get; }
 		ISessionRepository Session { get; }
@@ -26,6 +26,6 @@ namespace Database.IUnitOfWork
 		IUserRepository User { get; }
 
 
-		Task SaveChangesAsync();
+		public ITransaction BeginTransaction();
 	}
 }
