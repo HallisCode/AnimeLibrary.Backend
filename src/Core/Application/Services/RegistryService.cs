@@ -61,15 +61,13 @@ namespace Application.Services
 
 			Guid tempGuid = Guid.NewGuid();
 
-			using (ITransaction transaction = dbcontext.BeginTransaction())
+			using (ITransaction transaction = await dbcontext.BeginTransactionAsync())
 			{
 				User user = new User(username: tempGuid.ToString());
 				await dbcontext.User.CreateAsync(user);
-				await transaction.SaveChangesAsync();
 
 				Security security = new Security(email: email, password: password, userID: user.ID);
 				await dbcontext.Security.CreateAsync(security);
-				await transaction.SaveChangesAsync();
 
 				await transaction.CommitAsync();
 			}
