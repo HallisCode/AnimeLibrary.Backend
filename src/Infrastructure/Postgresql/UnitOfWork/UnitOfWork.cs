@@ -5,7 +5,7 @@ using Database.IRepositories.Creators;
 using Database.IRepositories.User_;
 using Database.IUnitOfWork;
 using System;
-
+using System.Threading.Tasks;
 
 namespace Postgresql.UnitOfWork
 {
@@ -14,6 +14,12 @@ namespace Postgresql.UnitOfWork
 		private bool disposed = false;
 
 		private ApplicationDbContext dbContext;
+
+
+		public UnitOfWork(ApplicationDbContext dbContext)
+		{
+			this.dbContext = dbContext;
+		}
 
 
 		public ISecurityRepository Security => throw new NotImplementedException();
@@ -36,9 +42,9 @@ namespace Postgresql.UnitOfWork
 
 		public IUserRepository User => throw new NotImplementedException();
 
-		public ITransaction BeginTransaction()
+		public async Task<ITransaction> BeginTransactionAsync()
 		{
-			throw new NotImplementedException();
+			return new Transaction(await dbContext.Database.BeginTransactionAsync());
 		}
 	}
 }
