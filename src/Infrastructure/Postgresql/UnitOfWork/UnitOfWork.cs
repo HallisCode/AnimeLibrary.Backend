@@ -6,10 +6,16 @@ using Database.IRepositories.User_;
 using Database.IUnitOfWork;
 using System;
 
+
 namespace Postgresql.UnitOfWork
 {
 	public class UnitOfWork : IUnitOfWork
 	{
+		private bool disposed = false;
+
+		private ApplicationDbContext dbContext;
+
+
 		public ISecurityRepository Security => throw new NotImplementedException();
 
 		public ISessionRepository Session => throw new NotImplementedException();
