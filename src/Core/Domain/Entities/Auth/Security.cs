@@ -12,15 +12,17 @@ namespace Domain.Entities.Auth
 
 
 		// Relationships
-		public long UserID { get; private set; }
+		public ulong UserID { get; private set; }
 
 
 		// Logic
-		public Security(string email, string password)
+		public Security(string email, string password, ulong userID)
 		{
 			Email = email;
 
 			Password = password;
+
+			UserID = userID;
 		}
 
 		public void Update(string email = null, string password = null)
