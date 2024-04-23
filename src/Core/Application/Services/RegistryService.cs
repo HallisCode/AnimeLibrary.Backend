@@ -5,6 +5,7 @@ using Application.Utils;
 using Database.IUnitOfWork;
 using Domain.Entities.Auth;
 using Domain.Entities.User_;
+using System;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 
@@ -40,19 +41,31 @@ namespace Application.Services
 			}
 
 			// Проверяем что пользователя с такой почтой нету
-			Security otherSecurity = await dbcontext.Security.GetFirstByAsync((security => security.Email == email));
+			bool isEmailExist = (await dbcontext.Security.GetFirstByAsync((security => security.Email == email))) == null;
 
-			if (otherSecurity is not null) throw new AlreadyExistException("Пользователь с таким email уже зарегестрирован.");
+			if (isEmailExist) throw new AlreadyExistException("Пользователь с таким email уже зарегестрирован.");
 
 			// Проверяем что пользователя с таким username нету
-			User otherUser = await dbcontext.User.GetFirstByAsync((user => user.Username == request.Username));
+			bool isUsernameClaimed = (await dbcontext.User.GetFirstByAsync((user => user.Username.ToLower() == request.Username))) == null;
 
-			if (otherUser is not null) throw new AlreadyExistException("Данный username уже занят.");
+			if (isUsernameClaimed) throw new AlreadyExistException("Данный username уже занят.");
 
 			// Создаём необходимые сущности при регистрации пользователя
-			User user = new User(username: request.Username);
+			Guid tempGuid = Guid.NewGuid();
 
-			Security security = new Security();
+			// Создаём транзакцию на сохранение сущностей
+			using (ITransaction transaction = dbcontext.BeginTransaction())
+			{
+				User user = new User(username: tempGuid.ToString());
+				await dbcontext.User.CreateAsync(user);
+				await transaction.SaveChangesAsync();
+
+				Security security = new Security(email: email, password: password, userID: user.ID);
+				await dbcontext.Security.CreateAsync(security);
+				await transaction.SaveChangesAsync();
+
+				await transaction.CommitAsync();
+			}
 
 		}
 	}
