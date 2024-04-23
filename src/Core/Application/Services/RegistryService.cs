@@ -32,28 +32,35 @@ namespace Application.Services
 
 			string password;
 
+
 			// Хэшируем почту и пароль
+
 			using (SHA256 sha256 = SHA256.Create())
 			{
 				email = SHA256Util.EncryptToString(request.Email.ToLower(), sha256);
 
 				password = SHA256Util.EncryptToString(request.Password, sha256);
 			}
+			
 
 			// Проверяем что пользователя с такой почтой нету
+
 			bool isEmailExist = (await dbcontext.Security.GetFirstByAsync((security => security.Email == email))) == null;
 
 			if (isEmailExist) throw new AlreadyExistException("Пользователь с таким email уже зарегестрирован.");
 
+
 			// Проверяем что пользователя с таким username нету
+
 			bool isUsernameClaimed = (await dbcontext.User.GetFirstByAsync((user => user.Username.ToLower() == request.Username))) == null;
 
 			if (isUsernameClaimed) throw new AlreadyExistException("Данный username уже занят.");
 
-			// Создаём необходимые сущности при регистрации пользователя
-			Guid tempGuid = Guid.NewGuid();
 
 			// Создаём транзакцию на сохранение сущностей
+
+			Guid tempGuid = Guid.NewGuid();
+
 			using (ITransaction transaction = dbcontext.BeginTransaction())
 			{
 				User user = new User(username: tempGuid.ToString());
