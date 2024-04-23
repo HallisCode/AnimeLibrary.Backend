@@ -4,6 +4,7 @@ using Database.IRepositories.Classification;
 using Database.IRepositories.Creators;
 using Database.IRepositories.User_;
 using System;
+using System.Threading.Tasks;
 
 namespace Database.IUnitOfWork
 {
@@ -25,6 +26,6 @@ namespace Database.IUnitOfWork
 		IUserRepository User { get; }
 
 
-		public ITransaction BeginTransaction();
+		public Task<ITransaction> BeginTransactionAsync();
 	}
 }
