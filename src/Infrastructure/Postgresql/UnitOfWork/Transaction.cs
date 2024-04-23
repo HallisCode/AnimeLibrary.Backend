@@ -1,13 +1,14 @@
 ﻿using Database.IUnitOfWork;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
-using System.Data;
 using System.Threading.Tasks;
 
 namespace Postgresql.UnitOfWork
 {
 	public class Transaction : ITransaction
 	{
+		private bool disposed = false;
+
 		protected IDbContextTransaction transaction;
 
 		public Transaction(IDbContextTransaction transaction)
@@ -15,24 +16,44 @@ namespace Postgresql.UnitOfWork
 			this.transaction = transaction;
 		}
 
-		public Task CommitAsync()
+		public async Task CommitAsync()
+		{
+			await transaction.CommitAsync();
+		}
+
+		public async Task RollBackAsync()
+		{
+			await transaction.RollbackAsync();
+		}
+
+		public async Task SaveChangesAsync()
 		{
 			throw new NotImplementedException();
 		}
 
 		public void Dispose()
 		{
-			throw new NotImplementedException();
+			Dispose(true);
+
+			GC.SuppressFinalize(this);
 		}
 
-		public Task RollBackAsync()
+		protected virtual void Dispose(bool disposing)
 		{
-			throw new NotImplementedException();
+			if (!this.disposed)
+			{
+				if (disposing)
+				{
+					transaction.Dispose();
+				}
+
+				disposed = true;
+			}
 		}
 
-		public Task SaveChangesAsync()
+		~Transaction()
 		{
-			throw new NotImplementedException();
+			Dispose(false);
 		}
 	}
 }
