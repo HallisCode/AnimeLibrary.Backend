@@ -8,13 +8,13 @@ namespace Database.IQuery.Select
 	public interface IQuerySelectAllLike<TEntity>
 	{
 		Task<List<TEntity>> GetAllByLikeAsync(
-			object matchingField, string pattern,
+			string matchingField, string pattern,
 			int take, int offset,
 			Expression<Func<TEntity, object>> orderBy,
 			params Expression<Func<TEntity, object>>[] thenBy
 		);
 
 
-		Task<List<TEntity>> GetAllByLikeAsync(object matchingField, string pattern, int take, int offset);
+		Task<List<TEntity>> GetAllByLikeAsync(string matchingField, string pattern, int take, int offset);
 	}
 }
