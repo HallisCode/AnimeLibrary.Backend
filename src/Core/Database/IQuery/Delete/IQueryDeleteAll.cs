@@ -5,6 +5,6 @@ namespace Database.IQuery.Delete
 {
     public interface IQueryDeleteAll<TEntity>
     {
-        Task DeleteAllByAsync(IEnumerable<TEntity> entities);
+        Task DeleteAllAsync(IEnumerable<TEntity> entities);
     }
 }
