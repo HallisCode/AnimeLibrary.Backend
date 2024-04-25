@@ -9,7 +9,8 @@ namespace Postgresql.UnitOfWork
 	{
 		private bool disposed = false;
 
-		protected IDbContextTransaction transaction;
+		private IDbContextTransaction transaction;
+
 
 		public Transaction(IDbContextTransaction transaction)
 		{
@@ -26,11 +27,6 @@ namespace Postgresql.UnitOfWork
 			await transaction.RollbackAsync();
 		}
 
-		public async Task SaveChangesAsync()
-		{
-			throw new NotImplementedException();
-		}
-
 		public void Dispose()
 		{
 			Dispose(true);
@@ -38,7 +34,7 @@ namespace Postgresql.UnitOfWork
 			GC.SuppressFinalize(this);
 		}
 
-		protected virtual void Dispose(bool disposing)
+		private void Dispose(bool disposing)
 		{
 			if (!this.disposed)
 			{
