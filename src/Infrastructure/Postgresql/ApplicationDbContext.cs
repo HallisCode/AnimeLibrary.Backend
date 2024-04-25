@@ -1,5 +1,4 @@
-﻿using Domain.Entities;
-using Domain.Entities.Auth;
+﻿using Domain.Entities.Auth;
 using Domain.Entities.Book_;
 using Domain.Entities.Classification;
 using Domain.Entities.Creators;
@@ -31,6 +30,10 @@ namespace Postgresql
 		// Entity relationships
 		public DbSet<BookAuthor> BookAuthor { get; set; }
 
+		// Logic
+		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+		{
+		}
 
 	}
 }
