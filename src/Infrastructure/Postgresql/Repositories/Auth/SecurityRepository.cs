@@ -10,7 +10,12 @@ namespace Postgresql.Repositories.Auth
 {
 	public class SecurityRepository : ISecurityRepository
 	{
-		protected ApplicationDbContext dbContext;
+		private ApplicationDbContext dbContext;
+
+		public SecurityRepository(ApplicationDbContext dbContext)
+		{
+			this.dbContext = dbContext;
+		}
 
 		public async Task CreateAsync(Security entity)
 		{
