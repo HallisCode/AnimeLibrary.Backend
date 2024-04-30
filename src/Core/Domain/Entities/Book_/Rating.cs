@@ -11,6 +11,8 @@
 
 
 		// Logic
+		private Rating() { }
+
 		public Rating(ValueObjects.DecimalRating score, ulong userID, ulong bookID)
 		{
 			Score = score;

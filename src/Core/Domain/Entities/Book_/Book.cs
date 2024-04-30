@@ -30,6 +30,8 @@ namespace Domain.Entities.Book_
 
 
 		// Logic
+		private Book() { }
+
 		public Book
 			(
 			string title,

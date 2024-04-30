@@ -21,6 +21,8 @@ namespace Domain.Entities.Classification
 
 
 		// Logic
+		private Category() { }
+
 		public Category(string title, ulong? parentCategoryID = null)
 		{
 			Title = title;

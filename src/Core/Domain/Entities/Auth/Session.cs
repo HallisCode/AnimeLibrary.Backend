@@ -18,6 +18,8 @@ namespace Domain.Entities.Auth
 
 
 		// Logic
+		private Session() { }
+
 		public Session(string appName, ulong userID)
 		{
 			AppName = appName;

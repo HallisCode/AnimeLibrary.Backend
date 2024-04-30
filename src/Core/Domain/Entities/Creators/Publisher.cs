@@ -13,6 +13,8 @@ namespace Domain.Entities.Creators
 
 
 		// Logic
+		private Publisher() { }
+
 		public Publisher(string name)
 		{
 			Name = name;

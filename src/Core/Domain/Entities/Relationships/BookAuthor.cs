@@ -15,6 +15,8 @@ namespace Domain.Entities.Relationships
 
 
 		// Logic
+		private BookAuthor() { }
+
 		public BookAuthor(ulong authorID, ulong bookID)
 		{
 			AuthorID = authorID;

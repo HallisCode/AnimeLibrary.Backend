@@ -18,6 +18,8 @@ namespace Domain.Entities.User_
 
 
 		// Logic
+		private MarkedBook() { }
+
 		public MarkedBook(MarkedBookStatus status, ulong userID, ulong bookID)
 		{
 			Status = status;

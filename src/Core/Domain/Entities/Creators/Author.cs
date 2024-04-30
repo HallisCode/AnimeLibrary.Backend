@@ -22,6 +22,8 @@ namespace Domain.Entities.Creators
 
 
 		// Logic
+		private Author() { }
+
 		public Author
 			(
 			string name,

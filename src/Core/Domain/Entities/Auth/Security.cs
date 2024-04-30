@@ -13,6 +13,8 @@
 
 
 		// Logic
+		private Security() { }
+
 		public Security(string email, string password, ulong userID)
 		{
 			Email = email;
