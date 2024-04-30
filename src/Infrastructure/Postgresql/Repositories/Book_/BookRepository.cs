@@ -1,4 +1,5 @@
 ﻿using Database.IRepositories.Book_;
+using Domain.Entities.Auth;
 using Domain.Entities.Book_;
 using Microsoft.EntityFrameworkCore;
 using System;
