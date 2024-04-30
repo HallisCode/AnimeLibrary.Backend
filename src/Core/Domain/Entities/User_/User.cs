@@ -11,6 +11,8 @@ namespace Domain.Entities.User_
 
 
 		// Logic
+		private User() { }
+
 		public User(string username)
 		{
 			Username = username;

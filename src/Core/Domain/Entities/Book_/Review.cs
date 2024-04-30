@@ -20,6 +20,8 @@ namespace Domain.Entities.Book_
 
 
 		// Logic
+		private Review() { }
+
 		public Review
 			(
 			string content,
