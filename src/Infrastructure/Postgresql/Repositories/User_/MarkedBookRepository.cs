@@ -1,13 +1,10 @@
 ﻿using Database.IRepositories.User_;
-using Domain.Entities.Auth;
-using Domain.Entities.Book_;
 using Domain.Entities.User_;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Postgresql.Repositories.User_

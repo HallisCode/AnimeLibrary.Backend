@@ -25,7 +25,7 @@ namespace Postgresql.Repositories.Auth
 			await dbContext.SaveChangesAsync();
 		}
 
-		public async Task DeleteFirstByAsync(Security entity)
+		public async Task DeleteFirstAsync(Security entity)
 		{
 			dbContext.Remove(entity);
 
