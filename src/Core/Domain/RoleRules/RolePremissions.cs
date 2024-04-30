@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using Domain.RoleRules.Entities;
+﻿using Domain.RoleRules.Entities;
 using Domain.RoleRules.Enums;
 using Domain.RoleRules.Enums.Roles;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Domain.RoleRules
 {

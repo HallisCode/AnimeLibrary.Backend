@@ -1,7 +1,4 @@
-﻿using Domain.Validation.Models;
-using FluentValidation;
-
-namespace Domain.Entities.Auth
+﻿namespace Domain.Entities.Auth
 {
 
 	public class Security : Entity<ulong>

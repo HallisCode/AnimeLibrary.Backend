@@ -1,7 +1,4 @@
-﻿using Domain.Validation.Models;
-using FluentValidation;
-
-namespace Domain.Entities.Book_
+﻿namespace Domain.Entities.Book_
 {
 	public class Rating : Entity<ulong>
 	{

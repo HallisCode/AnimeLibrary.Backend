@@ -1,7 +1,5 @@
 ﻿using Domain.Entities.User_;
 using Domain.Enums;
-using Domain.Validation.Models;
-using FluentValidation;
 
 namespace Domain.Entities.Book_
 {
