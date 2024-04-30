@@ -1,8 +1,6 @@
-﻿using Domain.IEntites.Book_;
-
-namespace Application.DTO.Book_
+﻿namespace Application.DTO.Book_
 {
-	public record CreateBookRequest : IBook
+	public record CreateBookRequest
 	{
 		public string Title => throw new System.NotImplementedException();
 

@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 
 namespace Application.IServices
 {
-    public interface IRegistryService
-    {
-        Task RegistryAsync(RegistryRequest request);
-    }
+	public interface IRegistryService
+	{
+		Task RegistryAsync(RegistryRequest request);
+	}
 }

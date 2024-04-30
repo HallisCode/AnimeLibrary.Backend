@@ -41,7 +41,7 @@ namespace Application.Services
 
 				password = SHA256Util.EncryptToString(request.Password, sha256);
 			}
-			
+
 
 			// Проверяем что пользователя с такой почтой нету
 
