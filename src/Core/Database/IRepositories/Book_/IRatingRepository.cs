@@ -2,7 +2,7 @@
 
 namespace Database.IRepositories.Book_
 {
-    public interface IRatingRepository : IBaseOperations<Rating>
+	public interface IRatingRepository : IBaseOperations<Rating>
 	{
 
 	}

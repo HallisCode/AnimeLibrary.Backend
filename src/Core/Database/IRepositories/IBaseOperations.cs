@@ -1,6 +1,6 @@
-﻿using Database.IQuery.Delete;
+﻿using Database.IQuery;
+using Database.IQuery.Delete;
 using Database.IQuery.Select;
-using Database.IQuery;
 
 namespace Database.IRepositories
 {

@@ -5,7 +5,7 @@ using Domain.Entities.User_;
 
 namespace Database.IRepositories.User_
 {
-	public interface IMarkedBookRepository : 
+	public interface IMarkedBookRepository :
 		IQuerySelectAll<MarkedBook>, IQueryCreate<MarkedBook>,
 		IQueryUpdate<MarkedBook>, IQueryDeleteFirst<MarkedBook>
 	{

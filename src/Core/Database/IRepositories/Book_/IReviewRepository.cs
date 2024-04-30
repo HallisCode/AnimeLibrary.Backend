@@ -2,7 +2,7 @@
 
 namespace Database.IRepositories.Book_
 {
-    public interface IReviewRepository : IBaseOperations<Review>
+	public interface IReviewRepository : IBaseOperations<Review>
 	{
 
 	}

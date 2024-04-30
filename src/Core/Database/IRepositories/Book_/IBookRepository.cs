@@ -3,7 +3,7 @@ using Domain.Entities.Book_;
 
 namespace Database.IRepositories.Book_
 {
-    public interface IBookRepository : IBaseOperations<Book>, IQuerySelectAllLike<Book>
+	public interface IBookRepository : IBaseOperations<Book>, IQuerySelectAllLike<Book>
 	{
 
 	}

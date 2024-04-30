@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 
 namespace Database.IQuery.Select
 {
-    public interface IQuerySelectFirst<TEntity>
-    {
-        Task<TEntity> GetFirstByAsync(Expression<Func<TEntity, bool>> predicate);
-    }
+	public interface IQuerySelectFirst<TEntity>
+	{
+		Task<TEntity> GetFirstByAsync(Expression<Func<TEntity, bool>> predicate);
+	}
 }

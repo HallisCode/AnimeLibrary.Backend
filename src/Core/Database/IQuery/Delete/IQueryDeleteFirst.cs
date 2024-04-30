@@ -3,8 +3,8 @@
 
 namespace Database.IQuery.Delete
 {
-    public interface IQueryDeleteFirst<TEntity>
-    {
-        Task DeleteFirstAsync(TEntity entity);
-    }
+	public interface IQueryDeleteFirst<TEntity>
+	{
+		Task DeleteFirstAsync(TEntity entity);
+	}
 }
