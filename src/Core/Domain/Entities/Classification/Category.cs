@@ -1,6 +1,4 @@
 using Domain.Entities.Book_;
-using Domain.Validation.Models;
-using FluentValidation;
 using System.Collections.Generic;
 
 

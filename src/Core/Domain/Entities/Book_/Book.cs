@@ -1,8 +1,6 @@
 ﻿using Domain.Entities.Classification;
 using Domain.Entities.Creators;
 using Domain.Entities.Relationships;
-using Domain.Validation.Models;
-using FluentValidation;
 using System.Collections.Generic;
 
 namespace Domain.Entities.Book_

@@ -3,7 +3,7 @@ using Domain.RoleRules.Enums;
 
 namespace Domain.Entities.User_
 {
-    public class User : Entity<ulong>
+	public class User : Entity<ulong>
 	{
 		public string Username { get; set; }
 

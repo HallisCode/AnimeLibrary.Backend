@@ -1,4 +1,4 @@
 ﻿namespace Domain.RoleRules.Entities
 {
-    public record Role(string Name);
+	public record Role(string Name);
 }
