@@ -45,14 +45,14 @@ namespace Application.Services
 
 			// Проверяем что пользователя с такой почтой нету
 
-			bool isEmailExist = (await dbcontext.Security.GetFirstByAsync((security => security.Email == email))) == null;
+			bool isEmailExist = (await dbcontext.Security.GetFirstByAsync((security => security.Email == email))) != null;
 
 			if (isEmailExist) throw new AlreadyExistException("Пользователь с таким email уже зарегестрирован.");
 
 
 			// Проверяем что пользователя с таким username нету
 
-			bool isUsernameClaimed = (await dbcontext.User.GetFirstByAsync((user => user.Username.ToLower() == request.Username))) == null;
+			bool isUsernameClaimed = (await dbcontext.User.GetFirstByAsync((user => user.Username.ToLower() == request.Username))) != null;
 
 			if (isUsernameClaimed) throw new AlreadyExistException("Данный username уже занят.");
 
