@@ -1,6 +1,6 @@
 ﻿namespace Domain.Entities.Book_
 {
-	public class Rating : Entity<ulong>
+	public class Rating : IComposePK
 	{
 		public ValueObjects.DecimalRating Score { get; private set; }
 
