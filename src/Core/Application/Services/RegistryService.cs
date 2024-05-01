@@ -5,9 +5,9 @@ using Application.Utils;
 using Database.IUnitOfWork;
 using Domain.Entities.Auth;
 using Domain.Entities.User_;
-using System;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
+
 
 namespace Application.Services
 {
@@ -22,7 +22,6 @@ namespace Application.Services
 		public RegistryService(IUnitOfWork dbcontext)
 		{
 			this.dbcontext = dbcontext;
-
 		}
 
 
@@ -59,11 +58,9 @@ namespace Application.Services
 
 			// Создаём транзакцию на сохранение сущностей
 
-			Guid tempGuid = Guid.NewGuid();
-
 			using (ITransaction transaction = await dbcontext.BeginTransactionAsync())
 			{
-				User user = new User(username: tempGuid.ToString());
+				User user = new User(username: request.Username);
 				await dbcontext.User.CreateAsync(user);
 
 				Security security = new Security(email: email, password: password, userID: user.ID);
