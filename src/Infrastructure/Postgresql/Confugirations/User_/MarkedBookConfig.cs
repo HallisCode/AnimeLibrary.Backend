@@ -10,6 +10,9 @@ namespace Postgresql.Confugirations.User_
 	{
 		public void Configure(EntityTypeBuilder<MarkedBook> builder)
 		{
+			// Keys
+			builder.HasKey(markedBook => new { markedBook.UserID, markedBook.BookID });
+
 			// Properties
 			builder.Property(markedBook => markedBook.Status).IsRequired();
 

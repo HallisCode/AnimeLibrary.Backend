@@ -5,7 +5,12 @@ using Domain.Entities.Creators;
 using Domain.Entities.Relationships;
 using Domain.Entities.User_;
 using Microsoft.EntityFrameworkCore;
-
+using Postgresql.Confugirations.Auth;
+using Postgresql.Confugirations.Book_;
+using Postgresql.Confugirations.Classification;
+using Postgresql.Confugirations.Creators;
+using Postgresql.Confugirations.Relationships;
+using Postgresql.Confugirations.User_;
 
 namespace Postgresql
 {
@@ -33,6 +38,33 @@ namespace Postgresql
 		// Logic
 		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
 		{
+		}
+
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
+		{
+			// Auth
+			modelBuilder.ApplyConfiguration(new SecurityConfig());
+			modelBuilder.ApplyConfiguration(new SecurityConfig());
+
+			// Book
+			modelBuilder.ApplyConfiguration(new BookConfig());
+			modelBuilder.ApplyConfiguration(new RatingConfig());
+			modelBuilder.ApplyConfiguration(new ReviewConfig());
+
+			// Classification
+			modelBuilder.ApplyConfiguration(new CategoryConfig());
+
+			// Creators
+			modelBuilder.ApplyConfiguration(new AuthorConfig());
+			modelBuilder.ApplyConfiguration(new PublisherConfig());
+
+			// Relationships
+			modelBuilder.ApplyConfiguration(new BookAuthorConfig());
+
+			// User
+			modelBuilder.ApplyConfiguration(new MarkedBookConfig());
+			modelBuilder.ApplyConfiguration(new UserConfig());
+
 		}
 
 	}

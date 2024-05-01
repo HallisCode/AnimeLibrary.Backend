@@ -10,6 +10,9 @@ namespace Postgresql.Confugirations.Book_
 	{
 		public void Configure(EntityTypeBuilder<Review> builder)
 		{
+			// Keys
+			builder.HasKey(review => new { review.UserID, review.BookID });
+
 			// Properties
 			builder.Property(review => review.Content).IsRequired().HasMaxLength(5012);
 

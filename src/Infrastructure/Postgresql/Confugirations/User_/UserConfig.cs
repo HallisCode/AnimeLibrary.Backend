@@ -1,7 +1,7 @@
 ﻿using Domain.Entities.User_;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
+using Postgresql.Converters;
 
 namespace Postgresql.Confugirations.User_
 {
@@ -14,6 +14,8 @@ namespace Postgresql.Confugirations.User_
 
 			// Properties
 			builder.Property(user => user.Username).IsRequired().HasMaxLength(32);
+
+			builder.Property(user => user.Role).HasConversion<RoleToString>();
 		}
 	}
 }

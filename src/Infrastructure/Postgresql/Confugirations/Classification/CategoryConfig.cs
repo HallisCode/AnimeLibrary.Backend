@@ -23,7 +23,7 @@ namespace Postgresql.Confugirations.Classification
 				.OnDelete(DeleteBehavior.SetNull);
 
 			builder.HasMany<Book>(category => category.Books)
-				.WithMany();
+				.WithMany(book => book.Categories);
 		}
 	}
 }
