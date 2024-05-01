@@ -9,13 +9,16 @@ namespace Postgresql.Confugirations.User_
 	{
 		public void Configure(EntityTypeBuilder<User> builder)
 		{
+			// Keys
+			builder.HasKey(user => user.ID);
+
 			// Indexes
 			builder.HasIndex(user => user.Username).IsUnique();
 
 			// Properties
 			builder.Property(user => user.Username).IsRequired().HasMaxLength(32);
 
-			builder.Property(user => user.Role).HasConversion<RoleToString>();
+			builder.Property(user => user.Role).IsRequired().HasConversion<RoleToString>();
 		}
 	}
 }

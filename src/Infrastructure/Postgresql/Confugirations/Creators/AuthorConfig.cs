@@ -8,6 +8,9 @@ namespace Postgresql.Confugirations.Creators
 	{
 		public void Configure(EntityTypeBuilder<Author> builder)
 		{
+			// Keys
+			builder.HasKey(author => author.ID);
+
 			// Indexes
 			builder.HasIndex(author => author.Name);
 

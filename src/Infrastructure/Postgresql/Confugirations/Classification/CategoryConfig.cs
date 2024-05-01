@@ -10,8 +10,11 @@ namespace Postgresql.Confugirations.Classification
 	{
 		public void Configure(EntityTypeBuilder<Category> builder)
 		{
+			// Keys
+			builder.HasKey(category => category.ID);
+
 			// Indexes
-			builder.HasIndex(categoey => categoey.Title).IsUnique();
+			builder.HasIndex(category => category.Title).IsUnique();
 
 			// Properties
 			builder.Property(category => category.Title).IsRequired().HasMaxLength(32);

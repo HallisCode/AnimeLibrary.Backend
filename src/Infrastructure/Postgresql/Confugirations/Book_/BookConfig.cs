@@ -10,6 +10,9 @@ namespace Postgresql.Confugirations.Book_
 	{
 		public void Configure(EntityTypeBuilder<Book> builder)
 		{
+			// Keys
+			builder.HasKey(book => book.ID);
+
 			// Indexes
 			builder.HasIndex(book => book.Title).IsUnique();
 

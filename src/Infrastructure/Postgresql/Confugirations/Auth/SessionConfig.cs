@@ -9,8 +9,11 @@ namespace Postgresql.Confugirations.Auth
 	{
 		public void Configure(EntityTypeBuilder<Session> builder)
 		{
+			// Keys
+			builder.HasKey(session => session.ID);
+
 			// Properties
-			builder.Property(security => security.AppName).IsRequired().HasMaxLength(128);
+			builder.Property(session => session.AppName).IsRequired().HasMaxLength(128);
 
 			// Relationships
 			builder.HasOne<User>()

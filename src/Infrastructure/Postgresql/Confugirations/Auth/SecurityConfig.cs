@@ -9,6 +9,9 @@ namespace Postgresql.Confugirations.Auth
 	{
 		public void Configure(EntityTypeBuilder<Security> builder)
 		{
+			// Keys
+			builder.HasKey(security => security.ID);
+
 			// Indexes
 			builder.HasIndex(security => security.Email).IsUnique();
 

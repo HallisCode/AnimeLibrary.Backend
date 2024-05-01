@@ -44,7 +44,7 @@ namespace Postgresql
 		{
 			// Auth
 			modelBuilder.ApplyConfiguration(new SecurityConfig());
-			modelBuilder.ApplyConfiguration(new SecurityConfig());
+			modelBuilder.ApplyConfiguration(new SessionConfig());
 
 			// Book
 			modelBuilder.ApplyConfiguration(new BookConfig());
