@@ -1,12 +1,10 @@
 ﻿using Database.IRepositories.Creators;
-using Domain.Entities.Classification;
 using Domain.Entities.Creators;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Postgresql.Repositories.Creators
