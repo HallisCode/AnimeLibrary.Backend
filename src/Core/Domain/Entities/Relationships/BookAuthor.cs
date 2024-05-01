@@ -3,7 +3,7 @@ using Domain.Entities.Creators;
 
 namespace Domain.Entities.Relationships
 {
-	public class BookAuthor
+	public class BookAuthor : IComposePK
 	{
 		// Relationships
 		public ulong AuthorID { get; set; }

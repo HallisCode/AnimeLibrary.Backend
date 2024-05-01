@@ -3,7 +3,7 @@ using Domain.Enums;
 
 namespace Domain.Entities.User_
 {
-	public class MarkedBook : Entity<ulong>
+	public class MarkedBook : IComposePK
 	{
 		public MarkedBookStatus Status { get; private set; }
 

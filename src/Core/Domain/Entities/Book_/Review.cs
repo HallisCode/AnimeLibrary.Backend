@@ -3,7 +3,7 @@ using Domain.Enums;
 
 namespace Domain.Entities.Book_
 {
-	public class Review : Entity<ulong>
+	public class Review : IComposePK
 	{
 		public string Content { get; private set; }
 

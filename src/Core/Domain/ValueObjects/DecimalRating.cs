@@ -7,14 +7,25 @@ namespace Domain.ValueObjects
 	/// </summary>
 	public record DecimalRating : IComparable<DecimalRating>, IComparable
 	{
-		public int Value { get; init; }
+		public byte Value { get; init; }
 
+		public DecimalRating(byte value)
+		{
+			Value = GetValidatedValue(value);
+		}
 
 		public DecimalRating(int value)
 		{
-			if (value < 0) Value = 0;
+			Value = GetValidatedValue((byte)value);
+		}
 
-			if (value > 10) Value = 10;
+		private byte GetValidatedValue(byte value)
+		{
+			if (value < 0) return 0;
+
+			else if (value > 10) return 10;
+
+			return value;
 		}
 
 		public int CompareTo(DecimalRating other)
@@ -29,6 +40,11 @@ namespace Domain.ValueObjects
 		public int CompareTo(object obj)
 		{
 			return -1;
+		}
+
+		public static implicit operator DecimalRating(byte value)
+		{
+			return new DecimalRating(value);
 		}
 	}
 }
